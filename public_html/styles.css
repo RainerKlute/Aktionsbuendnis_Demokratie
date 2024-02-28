@@ -1,0 +1,1356 @@
+@font-face {
+  font-family: kameron;
+  src: url(fonts/Kameron/Kameron-VariableFont_wght.woff2);
+
+}
+
+
+@font-face {
+  font-family: "Noto Sans Display";
+  src: url(fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf);
+
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(fonts/OpenSans-VariableFont_wdth,wght.woff2);
+
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Display";
+}
+
+a { 
+  text-decoration: none; 
+  
+}
+
+h2  {
+  font-family: 'Roboto';
+  font-size: 2rem;
+  font-weight: 700;
+  color: #506482;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 800px;
+}
+
+h2:first-of-type {
+  color: #fd9001; /* Setzt die Farbe des ersten h2-Elements auf Rot */
+  margin-top: 8rem;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  margin: 1rem;
+}
+
+p {
+  font-family: "Noto Sans Display";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #0c2140;
+  text-align: start;
+  margin: 2rem 6rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: start;
+
+}
+  
+}
+
+
+ 
+li {
+  font-family: "Noto Sans Display";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #0c2140;
+  text-align: start;
+  margin: 1.5rem 8rem;
+  
+}
+
+.orange {
+  color: #fd9001;
+}
+
+/*Menü*/
+.menue {
+  z-index: 95;
+  position: fixed; 
+  top: 0; 
+  background-color: var(--menue-background-color);
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 300;
+  
+  display: flex; 
+  justify-content: space-around;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+}
+
+
+
+.menue.show {
+  opacity: 1; /* Menü sichtbar machen */
+  transform: translateY(0); /* Zurück zur ursprünglichen Position */
+  visibility: visible; /* Stellt die Sichtbarkeit des Menüs wieder her */
+}
+
+.menue a {
+  display: block; 
+  text-align: center;
+  transition: transform 0.7s ease;
+  padding: 1rem;
+  
+}
+
+.menue  a:hover {
+  transform: scale(1.2);
+}
+
+.header {
+  z-index: 100;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 10rem;
+  position: sticky;
+  top: 0;
+
+}
+.toogle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  z-index: 40;
+  
+  
+  
+}
+
+
+
+.toggle-line-top, .toggle-line-middle, .toggle-line-bottom {
+  height: 0.17rem;
+  border-radius: 0.05rem;
+  background-color: rgb(45, 33, 33);
+  
+  
+ 
+}
+
+
+
+.toggle-line-top {
+  width: 50%;
+  transition: transform 0.3s,  width 0.3s ease;
+ 
+}
+
+.toggle-line-middle {
+  width: 100%;
+}
+
+.toggle-line-bottom {
+  width: 50%;
+  margin-left: auto;
+  transition: transform 0.3s,  width 0.3s ease
+  
+  
+}
+
+.toogle:hover .toggle-line-bottom,
+.toogle:hover .toggle-line-top
+{
+  width: 100%; /* Breite während des Hovers */
+  background-color: #00317b;
+}
+
+
+
+/*Animation Toggle-Knopf*/
+
+.toogle.active .toggle-line-middle{
+display: none;
+}
+
+.toogle.active .toggle-line-top{
+width: 120%;
+transform: rotate(45deg) translateY(0.945rem);
+}
+
+.toogle.active .toggle-line-bottom{
+width: 120%;    
+transform: rotate(-45deg) translateY(-0.945rem);
+
+}
+
+/*Ende Animation Toggle-Knopf*/
+
+
+/*Ende Menü*/
+
+
+
+.abstandoben {
+  margin-top: 4rem;
+}
+
+.containerwrapper {
+ max-width: 2400px;
+ margin-inline: auto;
+ margin-top: 2rem;
+}
+
+
+.wrapperMM {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  background-color: #f9fafff6;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+
+
+  }
+
+
+.mobilelinklist {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .mobiletitle {
+    position: absolute;
+    display: none;
+    top: 2rem;
+    left: 7%;
+    width: 5rem;
+    height: 5rem;
+    background-image: url('images/Group 14.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    
+  }
+
+  .mobiletogglebuttton {
+    position: fixed;
+    display: none;
+    top: 2rem;
+    right: 7%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url('images/ToggleButton.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    z-index: 30; 
+    transition: transform 0.5s ease-in-out;
+    
+    
+    
+    
+  }
+
+  .mobiletogglebuttton:hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+
+.headder-links-mobile {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #506482;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.headder-links-mobile:hover {
+  transform: scale(1.2);
+  color: #fd9001;
+
+  
+}
+
+
+.headder-links-mobile:active {
+  color: #fd9001;
+}
+
+
+
+
+  .headder-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+   
+  }
+
+  .headder {
+    
+   
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+    max-width: 1400px;
+    }
+
+  .homebutton {
+    height: 5rem;
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .homebutton:hover {
+    transform: scale(1.2);
+  }
+
+  .buerger-logo { 
+    height: 8rem;
+    display: none;i
+  }
+
+  .headder-links {
+    font-family: 'Roboto';
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 7px;
+    transition: transform 0.5s ease-in-out;
+    color: #506482;
+  }
+  
+  .headder-links:hover, .headder-links:active {
+    transform: scale(1.2);
+    color: #fd9001;
+   
+    
+  }
+.containertoggle {
+  display: none;
+  width:  80%;
+  margin: auto;
+  align-items: end;
+  justify-content: end;
+}
+  .togglebuttton {
+    display: none;
+   
+  }
+  
+  .sliderwrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #011b36;
+    background-color: #6984ad;
+    height: auto;
+    width: 100%;
+    padding: 3rem 5rem 3rem 5rem;
+    margin: auto;
+    margin-top: 4rem;
+    
+
+}
+.slider {
+    display: none;
+    opacity: 0;
+    height: auto;
+    width: 80%;
+    height: 12rem;
+
+    
+}
+
+.active-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    transition: opacity 0.5s ease-in-out;
+    flex-shrink: 1
+  }
+
+
+.slidertext {
+  text-align: start;
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.Uebersslider{
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #00112a;
+  font-size: 2rem;
+  display: flex;
+  margin:0;
+  
+}
+.natigationspunkte {
+    margin-top: 2rem;
+    display: none;
+}
+
+.farbe {
+  color: #ffffff;
+}
+
+.eurofarbe {
+  color: #00112a;
+  font-family: roboto;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+}
+
+.navigationlinks, .navigationrechts {
+  margin: auto;
+  display: flex;
+  height: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+}
+
+.navigationlinks img {
+  margin-left: 0.3rem;
+}
+
+
+.navigationrechts img {
+  margin-right: 0.3rem;
+}
+
+
+
+
+  
+
+  .unterstuetzungsbutton2:hover {
+    transform: scale(1.2);
+  }
+
+  .slogan {
+    font-family: 'Roboto';
+    font-size: 1.4rem;
+    height: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-inline: auto;
+    position:relative;
+    bottom: 5.5rem;
+    line-height: 1.6;
+  }
+
+  .unterstuetzungsbutton {
+    font-family: "Noto Sans Display";
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 3rem;
+    background-color: #fd9001;
+    color: #00112a;
+    border: 1rem;
+    align-items: center;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    border-radius: 0;
+    position:relative;
+    bottom: 1.6rem;
+    z-index: 10;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .unterstuetzungsbutton:hover {
+    transform: scale(1.06);
+  }
+
+  
+    
+  
+  
+  .unterstuetzungscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 86%;
+    margin-inline: auto;
+  
+  }
+
+  .weitereinfos {
+    color: #00112a;
+    text-align: center;
+    font-family: 'Roboto';
+    background-color: #6984ad;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  
+  }
+
+  .trenner {
+    margin-bottom: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 0.5rem;
+    background-color: #AFC5E6;
+  
+  }
+
+.kachelcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 1rem;
+  width: 86%;
+  margin: auto;
+  
+
+}
+
+.kachel {
+  background-image: url('images/hintergrund-kacheln.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  overflow: hidden;
+  position:relative;
+  border: 0.0rem solid #020b18;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(169, 167, 167, 0.952);
+
+}
+
+.marginlr10 {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+
+
+
+
+.kachelüberschrift {
+  
+  
+  color: #00112a;
+  font-family: roboto;
+  position: absolute;
+  top: 10%;
+  font-size: 1.8rem;
+}
+
+.kacheltrennstrich {
+  position: absolute;
+  top: 37%;
+  height: 0.2rem;
+  width: 80%;
+  background-color: #0041A5;
+
+}
+
+.kacheltext {
+  position: absolute;
+  top: 35%;
+  max-height: 60%;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.5s ease-in-out;
+  
+  
+
+  }
+
+ 
+
+
+  .kacheltext2 {
+    position: absolute;
+    top: 42%;
+    max-height: 60%;
+    
+    overflow: hidden;
+    
+    font-size: 1.3rem;
+    transition: transform 0.5s ease-in-out;
+    
+    
+  
+    }
+  
+    .kacheltext2:hover {
+      transform: scale(1.15);
+    }
+
+  .kachelmehr {
+    margin-top: 2rem;
+    
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #6984ad;
+    position: absolute;
+    bottom: 10%;
+    transition: transform 0.5s ease-in-out;
+    padding: 1rem 1rem 1rem 0rem;
+   
+  }
+
+  .kachelmehr:hover {
+    transform: scale(1.3);
+    color: #546b8e;
+    
+   
+  }
+
+.interesse {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  background-color: #fd9001;
+  border-radius: 0.5rem;
+  color: #00112a;
+  
+  
+}
+
+
+.unterstuetzungsbutton2 {
+  
+  padding: 1rem 3rem;
+  margin: 6rem auto;
+  width: 50%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  transition: transform 0.5s ease-in-out;
+  font-weight: 600;
+  background-color: #00112a;
+  border-radius: 0.5rem;
+  color: #dcdcdc;
+}
+
+
+
+  
+
+  .unterstuetzungsbutton2:hover {
+    transform: scale(1.05);
+  }
+
+.lrwrapper {
+  width: 86%;
+  margin: 3rem auto;
+  display: flex;
+}
+
+.lrlinks {
+  width: 50%;
+  
+  
+
+
+}
+
+.lrtextgross {
+  color: #506482;
+  text-transform: uppercase;
+  text-align: end;
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 20%;
+  margin-right: 5%;
+}
+
+.lrrechts {
+  width: 50%;
+}
+
+.lrtextklein {
+  margin-right: 40%;
+  margin-left: 5%;
+  font-family: "Noto Sans Display";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #0c2140;
+  text-align: start;
+}
+
+
+.ouwrapper {
+  display: none;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  
+}
+.ouoben {
+  color: #506482;
+  
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  font-weight: 700;
+ 
+  margin-bottom: 4rem;
+}
+
+.ouunten {
+  text-align: start;
+  
+  margin-bottom: 3rem;
+  font-family: "Noto Sans Display";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #0c2140;
+  text-align: start;
+}
+
+/** Styles für Download-Bereich */
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw; 
+  margin: 6rem auto; 
+  gap: 10px; 
+}
+
+.image-item {
+  width: calc(50% - 5px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.image {
+  width: 100%;
+  height: auto; 
+  border: 2px solid #cccccc;
+  border-radius: 0.5rem;
+}
+
+.download-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem; 
+  text-decoration: none; 
+  color: #ffffff; 
+  background-color: #00112a;
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+}
+
+/** Styles für Download-Bereich Ende */
+
+.footerwrapper {
+  height: 14rem;
+  width: 100%;
+  background-color: #D9D9D9;
+  
+ 
+  
+}
+
+.innerfooter {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+ 
+  
+  
+  margin-inline: auto;
+  padding-top: 1.5rem;
+
+
+}
+
+.BfESchrifzug {
+  font-family: roboto;
+  color: #00112a;
+  width: 50%;
+  font-size: 1.3rem;
+  margin-right: auto;
+  margin-left: 6rem;
+  margin-bottom: 1rem;
+}
+
+.footerabstand {
+  width: 44%;
+}
+
+.footermenue {
+  width: 21%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.footermenue a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-right: 4rem;
+  color: black;
+  padding: 0.6rem 2rem 0.6rem 2rem;
+  text-align: justify;
+  width: auto;
+  margin-left: 4rem;
+}
+
+.footermenue a:hover {
+  background-color: #AFC5E6;
+  border-radius: 0.3rem;
+ 
+}
+.footermenue a:last-child {
+  margin-bottom: 0; 
+}
+
+
+.contact-form {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.contact-form h2 {
+  color: #506482;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #506482;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fd9001;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e38204;
+}
+
+.haupttext {
+  margin-top: 7rem;
+}
+
+
+/* Style for the dropdown */
+select#betrag {
+  width: 100%; /* Full width */
+  padding: 8px 16px; /* Padding inside the dropdown */
+  margin: 8px 0; /* Margin around the dropdown */
+  display: inline-block; /* Allows for the margin to take effect */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Makes sure padding does not affect the width */
+  font-size: 16px; /* Increased font size for better readability */
+  cursor: pointer; /* Changes cursor to indicate it's a dropdown */
+}
+
+/* Style for the dropdown when user is interacting with it */
+select#betrag:focus {
+    border-color: #211505; 
+    outline: none; 
+    box-shadow: 0 0 5px #0c080379; 
+}
+
+/* Style for the dropdown options */
+select#betrag option {
+  padding: 10px; /* Padding inside the dropdown options */
+}
+
+
+
+
+@media (hover: hover) {
+ 
+
+  .navigationlinks:hover, .navigationrechts:hover {
+    margin: auto;
+    transform: scale(1.3);
+  }
+  
+  }
+
+
+
+
+  
+
+
+
+@media  (max-width: 1366px) {
+
+  .kacheltext {
+    
+    top: 31%;
+   
+    
+    
+  
+    }
+
+   
+   
+}
+
+@media  (max-width: 1310px) {
+  .headder-links {
+    padding: 0.5rem 0.5rem;
+  }
+}
+  @media  (max-width: 1150px) {
+
+    .kachelcontainer {
+      
+      grid-template-columns: 1fr 1fr; 
+    
+ 
+    }
+
+    
+    @media (max-width: 1200px) {
+      .image-container {
+        width: 80vw;
+      }
+
+    }
+   
+
+  .sliderwrapper {
+    padding: 3rem 3rem 3rem 3rem;
+  }
+
+
+
+  .buerger-logo {
+    display: none;
+  }
+
+  .lrtextklein {
+    margin-right: 20%;
+    
+  }
+  }
+
+
+
+  @media  (min-width: 1050px) {
+    .wrapperMM {
+      display: none;
+    }
+  }
+  
+
+  @media  (max-width: 1050px) {
+
+  .headder {
+    display: none;
+
+  }
+
+  .mobiletogglebuttton {
+    display: flex;
+  }
+  
+
+  .mobilelinklist {
+    display: flex;
+  }
+  .slider {
+    height: 20rem;
+  
+  }
+  
+  .slidertext {
+    font-size: 1.2rem;
+   }
+ 
+}
+
+
+
+@media  (min-width: 1051px) {
+
+ 
+  .mobilelinklist {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 800px) {
+  .image-container {
+    width: 90vw;
+  }
+
+}
+
+
+  @media  (max-width: 725px) {
+
+    .kachelcontainer {
+      
+      grid-template-columns: 1fr; 
+    
+     }
+
+  }
+
+  @media  (max-width: 700px) {
+    .sliderwrapper {
+      padding: 3rem 1rem 3rem 1rem;
+      margin-top: 3rem;
+    }
+    .unterstuetzungsbutton2 {
+      width: 80%;
+      
+  }
+
+  .BfESchrifzug {
+    margin-left: 2rem;
+  }
+
+  .footermenue a {
+    margin-right: 2rem;
+    padding: 0;
+    margin-left: 2rem;
+  }
+
+  h2, p {
+    margin: 2rem 2rem;
+    
+  }
+ h2 {
+   font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  li {
+    margin: 1.5rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .ouunten {
+    font-size: 1.1rem;
+  }
+
+  .slider {
+    height: 21rem;
+  
+  }
+
+  .lrwrapper {
+    display: none;
+    
+  }
+
+  .ouwrapper {
+    display: flex;
+    width: 80%;
+    text-align: start;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    flex-direction: column; 
+    width: 80vw;
+    gap: 20px; 
+  }
+
+  .image-item {
+    width: 100%; 
+  }
+
+  .image-container .image-item:not(:first-child) {
+    margin-top: 2rem; /* Fügt einen oberen Abstand von 20px zu jedem .image-item hinzu, außer dem ersten */
+  }
+  
+}
+
+
+@media  (min-width: 500px) {
+
+
+  .nurmobil {
+    display: none;
+  }
+}
+
+  @media  (max-width: 500px) {
+
+    .headder-wrapper {
+     
+      
+     
+      margin-bottom: 0.5rem;
+      
+     
+    }
+
+    .unterstuetzungsbutton {
+      margin-right: 0;
+      font-size: 2.3rem;
+      
+    }
+
+    .slidertext {
+      margin-inline: 0.6rem;
+      margin-bottom: 3.5rem;
+      
+    }
+   
+    .unterstuetzungsbutton2 {
+      width: 90%;
+      font-size: 2.3rem;
+  }
+
+
+
+  .lrtextgross {
+    font-size: 1.4rem ;
+    word-wrap: break-word;
+
+  }
+
+  .footerabstand {
+    width: 20%;
+  }
+  .footermenue {
+    width: 52%;
+    align-items: start;
+  
+  }
+  .slider {
+    height: 18rem;
+  
+  }
+
+}
+
+@media  (max-width: 480px) {
+
+.contact-form {
+  margin-top: 5rem;
+}
+
+
+h2:first-of-type {
+  margin-top: 5rem;
+}
+
+  .sliderwrapper {
+    padding-left:  0.3rem;
+    padding-right: 0.3rem;
+   
+  }
+}
+
+
+  @media  (max-width: 420px) {
+    .sliderwrapper {
+      padding-left:  0.3rem;
+      padding-right: 0.3rem;
+      height: 29rem;
+    }
+
+   
+
+   
+  }
+
+  @media  (max-width: 345px) {
+   
+
+    .slidertext {
+      font-size: 1rem;
+    }
+    
+    .Uebersslider {
+    font-size: 1.4rem;
+    }
+    
+      .slogan {
+     font-size: 1.1rem;
+   }
+
+
+  }
+  
+  @media  (max-width: 300px) {
+    .sliderwrapper {
+      display: none;
+    }
+    .unterstuetzungsbutton {
+      display: none;
+    }
+    
+   .eurofarbe {
+  display: none;
+
+}
+
+}
+
+
+
+  
+  
+  @media  (max-width: 350px) {
+    
+ 
+    
+  .kacheltext {
+    
+   font-size: 0.8rem;
+    
+    
+  
+    }
+    
+    .kachelüberschrift {
+  
+  
+ 
+  font-size: 1.2rem;
+}
+    
+ 
+  }
+    
+  @media  (max-width: 300px) {
+    
+
+    .unterstuetzungsbutton2 {
+      width: 98%;
+      padding: 1rem;
+  }
+  }
+
