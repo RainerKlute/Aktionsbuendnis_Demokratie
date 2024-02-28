@@ -41,7 +41,7 @@ a {
 
 h2  {
   font-family: 'Roboto';
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #506482;
   text-align: center;
@@ -51,7 +51,7 @@ h2  {
 
 h2:first-of-type {
   color: #fd9001; /* Setzt die Farbe des ersten h2-Elements auf Rot */
-  margin-top: 8rem;
+  margin-top: 2rem;
 }
 
 h3 {
@@ -74,8 +74,6 @@ p {
   max-width: 800px;
   text-align: start;
 
-}
-  
 }
 
 
@@ -144,8 +142,8 @@ li {
   height: 10rem;
   position: sticky;
   top: 0;
-
 }
+
 .toogle {
   display: flex;
   flex-direction: column;
@@ -154,9 +152,6 @@ li {
   height: 3rem;
   cursor: pointer;
   z-index: 40;
-  
-  
-  
 }
 
 
@@ -317,35 +312,28 @@ transform: rotate(-45deg) translateY(-0.945rem);
   
 }
 
-
 .headder-links-mobile:active {
   color: #fd9001;
 }
 
-
-
-
-  .headder-wrapper {
+.headder-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     width: 100%;
-   
-    margin-bottom: 3rem;
-    font-size: 1.8rem;
-   
-  }
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
 
-  .headder {
-    
-   
+.headder {
     font-weight: bold;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     width: 86%;
     max-width: 1400px;
-    }
+    margin-right: 1rem;
+}
 
   .homebutton {
     height: 5rem;
@@ -359,12 +347,13 @@ transform: rotate(-45deg) translateY(-0.945rem);
 
   .buerger-logo { 
     height: 8rem;
-    display: none;i
+    display: none;
   }
 
   .headder-links {
     font-family: 'Roboto';
     padding: 0.5rem 1.5rem;
+    margin-right: 1rem;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 7px;
     transition: transform 0.5s ease-in-out;
@@ -372,11 +361,10 @@ transform: rotate(-45deg) translateY(-0.945rem);
   }
   
   .headder-links:hover, .headder-links:active {
-    transform: scale(1.2);
+    text-decoration: overline;
     color: #fd9001;
-   
-    
   }
+
 .containertoggle {
   display: none;
   width:  80%;
@@ -389,7 +377,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
    
   }
   
-  .sliderwrapper {
+.sliderwrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -400,18 +388,16 @@ transform: rotate(-45deg) translateY(-0.945rem);
     width: 100%;
     padding: 3rem 5rem 3rem 5rem;
     margin: auto;
-    margin-top: 4rem;
-    
-
+    margin-top: 2rem;
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 20, .2);
 }
+
 .slider {
     display: none;
     opacity: 0;
     height: auto;
     width: 80%;
-    height: 12rem;
-
-    
+    height: 12rem;    
 }
 
 .active-slide {
@@ -483,10 +469,51 @@ transform: rotate(-45deg) translateY(-0.945rem);
   margin-right: 0.3rem;
 }
 
+h1 {
+  color: #f8f8f8;
+  font-size: 2.6rem;
+  text-shadow: 1px 1px 2px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
+.block {
+  display: block;
+}
 
+.subtitle {
+  color: #f8f8f8;
+  font-size: 1rem;
+  font-weight: 400;
+  text-shadow: none;
+}
 
-  
+.button {
+  width: fit-content;
+  border: 0;
+  border-radius: 0.4rem;
+  background: #fd9001;
+  color: #f8f8f8;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  margin: 1.6rem auto;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 20, .2);
+}
+
+.button:hover {
+  background-color: #506482;
+}
+
+.button a {
+  color: inherit;
+  font-family: inherit;
+}
 
   .unterstuetzungsbutton2:hover {
     transform: scale(1.2);
@@ -511,13 +538,13 @@ transform: rotate(-45deg) translateY(-0.945rem);
     width: 100%;
     text-align: center;
     padding: 1rem 1rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
     background-color: #fd9001;
     color: #00112a;
     border: 1rem;
     align-items: center;
     margin-inline: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     border-radius: 0;
     position:relative;
     bottom: 1.6rem;
@@ -570,10 +597,9 @@ transform: rotate(-45deg) translateY(-0.945rem);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
   gap: 1rem;
-  width: 86%;
+  width: 76%;
   margin: auto;
-  
-
+  margin-bottom: 4rem;
 }
 
 .kachel {
@@ -644,7 +670,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
 
   .kacheltext2 {
     position: absolute;
-    top: 42%;
+    top: 70%;
     max-height: 60%;
     
     overflow: hidden;
@@ -694,9 +720,9 @@ transform: rotate(-45deg) translateY(-0.945rem);
 
 .unterstuetzungsbutton2 {
   
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   margin: 6rem auto;
-  width: 50%;
+  width: 40%;
   border-radius: 5px;
   text-align: center;
   font-size: 3rem;
@@ -705,7 +731,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
   font-weight: 600;
   background-color: #00112a;
   border-radius: 0.5rem;
-  color: #dcdcdc;
+  color: #f9fafff6;
 }
 
 
@@ -732,7 +758,6 @@ transform: rotate(-45deg) translateY(-0.945rem);
 
 .lrtextgross {
   color: #506482;
-  text-transform: uppercase;
   text-align: end;
   font-family: 'Roboto';
   font-size: 1.8rem;
@@ -937,23 +962,8 @@ transform: rotate(-45deg) translateY(-0.945rem);
   resize: vertical;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #fd9001;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #e38204;
-}
-
 .haupttext {
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 
@@ -1146,7 +1156,7 @@ select#betrag option {
     
   }
  h2 {
-   font-size: 1.8rem;
+   font-size: 1.4rem;
   }
   p {
     font-size: 1.1rem;
@@ -1217,7 +1227,7 @@ select#betrag option {
 
     .unterstuetzungsbutton {
       margin-right: 0;
-      font-size: 2.3rem;
+      font-size: 1.8rem;
       
     }
 
@@ -1263,7 +1273,7 @@ select#betrag option {
 
 
 h2:first-of-type {
-  margin-top: 5rem;
+  margin-top: 1.6rem;
 }
 
   .sliderwrapper {
