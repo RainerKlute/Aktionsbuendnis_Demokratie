@@ -386,8 +386,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
     height: auto;
     width: 100%;
     padding: 3rem 5rem 3rem 5rem;
-    margin: auto;
-    margin-top: 2rem;
+    margin: 2rem 0 0 0;
     box-shadow: 2px 1px 2px 2px rgba(0, 0, 20, .2);
 }
 
@@ -1290,42 +1289,45 @@ h2:first-of-type {
       height: 29rem;
     }
 
-   
-
+    h1 {
+      font-size: 2rem;
+    }
    
   }
 
   @media  (max-width: 345px) {
    
-
     .slidertext {
       font-size: 1rem;
     }
     
     .Uebersslider {
-    font-size: 1.4rem;
+      font-size: 1.4rem;
     }
     
-      .slogan {
-     font-size: 1.1rem;
-   }
+    .slogan {
+      font-size: 1.1rem;
+    }
 
+    #eu-stars {
+      display: none;
+    }
 
+    .sliderwrapper {
+      padding-left:  0.2rem;
+      padding-right: 0.2rem;
+    }
   }
   
-  @media  (max-width: 300px) {
-    .sliderwrapper {
+  @media  (max-width: 260px) {
+
+    .sliderwrapper,
+    .unterstuetzungsbutton,
+    .eurofarbe,
+    #eu-stars {
       display: none;
     }
-    .unterstuetzungsbutton {
-      display: none;
-    }
-    
-   .eurofarbe {
-  display: none;
-
-}
-
+     
 }
 
 
