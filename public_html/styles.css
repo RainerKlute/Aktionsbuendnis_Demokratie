@@ -1286,6 +1286,12 @@ h2:first-of-type {
     padding-right: 0.3rem;
    
   }
+
+  .button, 
+  .action {
+    font-size: 1.4rem;
+    padding: 0.8rem 0.6rem;
+  }
 }
 
 
@@ -1300,6 +1306,11 @@ h2:first-of-type {
       font-size: 2rem;
     }
    
+    .button, 
+    .action {
+      font-size: 1.2rem;
+      padding: 0.8rem 1rem;
+    }
   }
 
   @media  (max-width: 345px) {
@@ -1335,6 +1346,11 @@ h2:first-of-type {
       display: none;
     }
      
+    .button, 
+    .action {
+      font-size: 1rem;
+      padding: 0.8rem 0.2rem;
+    }
 }
 
 
