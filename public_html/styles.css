@@ -291,9 +291,6 @@ transform: rotate(-45deg) translateY(-0.945rem);
   }
 
 
-
-
-
 .headder-links-mobile {
   font-family: 'Roboto';
   font-weight: bold;
@@ -304,15 +301,12 @@ transform: rotate(-45deg) translateY(-0.945rem);
   transition: transform 0.5s ease-in-out;
 }
 
-
 .headder-links-mobile:hover {
-  transform: scale(1.2);
+  text-decoration: overline;
   color: #fd9001;
-
-  
 }
 
-.headder-links-mobile:active {
+.headder-links-mobile.active {
   color: #fd9001;
 }
 
@@ -360,8 +354,13 @@ transform: rotate(-45deg) translateY(-0.945rem);
     color: #506482;
   }
   
-  .headder-links:hover, .headder-links:active {
+  .headder-links:hover {
     text-decoration: overline;
+    color: #fd9001;
+  }
+
+  .headder-links.active {
+    text-decoration: none;
     color: #fd9001;
   }
 
