@@ -1258,7 +1258,7 @@ select#betrag option {
 
   @media  (max-width: 420px) {
     .sliderwrapper {
-      padding-right: 2rem 1rem 2rem 0.4rem;
+      padding: 2rem 1rem 2rem 0.4rem;
     }
 
     h1 {
