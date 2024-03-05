@@ -291,7 +291,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
   }
 
 
-.headder-links-mobile {
+.header-links-mobile {
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 1.8rem;
@@ -301,16 +301,16 @@ transform: rotate(-45deg) translateY(-0.945rem);
   transition: transform 0.5s ease-in-out;
 }
 
-.headder-links-mobile:hover {
+.header-links-mobile:hover {
   text-decoration: overline;
   color: #fd9001;
 }
 
-.headder-links-mobile.active {
+.header-links-mobile.active {
   color: #fd9001;
 }
 
-.headder-wrapper {
+.header-wrapper {
     display: flex;
     justify-content: right;
     width: 100%;
@@ -318,7 +318,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
     font-size: 1.4rem;
 }
 
-.headder {
+.header {
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -344,7 +344,7 @@ transform: rotate(-45deg) translateY(-0.945rem);
     display: none;
   }
 
-  .headder-links {
+  .header-links {
     font-family: 'Roboto';
     padding: 0.5rem 1.5rem;
     margin-right: 1rem;
@@ -354,12 +354,12 @@ transform: rotate(-45deg) translateY(-0.945rem);
     color: #506482;
   }
   
-  .headder-links:hover {
+  .header-links:hover {
     text-decoration: overline;
     color: #fd9001;
   }
 
-  .headder-links.active {
+  .header-links.active {
     text-decoration: none;
     color: #fd9001;
   }
@@ -1012,7 +1012,7 @@ select#betrag option {
 
 
 @media  (max-width: 1310px) {
-  .headder-links {
+  .header-links {
     padding: 0.5rem 0.5rem;
   }
 }
@@ -1054,7 +1054,7 @@ select#betrag option {
 
   @media  (max-width: 1050px) {
 
-  .headder {
+  .header {
     display: none;
 
   }
@@ -1189,7 +1189,7 @@ select#betrag option {
 
   @media  (max-width: 500px) {
 
-    .headder-wrapper {
+    .header-wrapper {
      
       
      
