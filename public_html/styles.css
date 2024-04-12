@@ -291,6 +291,17 @@ transform: rotate(-45deg) translateY(-0.945rem);
   }
 
 
+.index-links { 
+  text-decoration: none; 
+  color: #506482;
+}
+
+.index-links:hover {
+  text-decoration: overline;
+  color: #fd9001;
+}
+
+
 .header-links-mobile {
   font-family: 'Roboto';
   font-weight: bold;
